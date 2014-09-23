@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
+  <title>Emberjs Blogapp </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Elemento Bootstrap 3 skin">
+  <meta name="keywords" content="bootstrap 3, skin">
+  <meta name="author" content="geedmo">
+
+  <!-- Font -->
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic' rel='stylesheet' type='text/css'>
+  
+  <!-- Bootstrap Styles -->
+  <link href="assets/css/bootstrap.min.css" rel="stylesheet" id="elemento-theme">
+
+  <!-- Support for HTML5 -->
+  <!--[if lt IE 9]>
+    <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!-- Enable media queries on older browsers -->
+  <!--[if lt IE 9]>
+    <script src="assets/js/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Docs Custom styles -->
+  <link href="assets/css/docs.css" rel="stylesheet">
+  
+</head>
+
+<body>
+
+  <!-- offcanvas content wrapper -->
+  <div class="oc-wrapper">
+
+
+    <script type="text/x-handlebars">
+
+
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation"style="margin: 0">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle oc-toggle" data-target="#oc-navbar" >
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Elemento</a>
+          </div>
+
+          <!-- offcanvas navbar -->
+          <div class="nav-collapse oc-navbar"  id="oc-navbar">
+              <!-- Menu right shadow -->
+              <div class="oc-shadow"></div>
+              <!-- slideback container -->
+              <ul class="nav navbar-nav onhover navbar-right oc-container" >
+                <!-- offcanvas menu CLOSE button -->
+                <li class="text-right">
+                    <em class="fa fa-times fa-2x oc-close"></em>
+                </li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="blog.html">Post List</a></li>
+                    <li><a href="blog-detail.html">Post Details</a></li>
+                  </ul>
+                </li>
+                <li>{{#link-to 'about'}}About{{/link-to}}</a></li>
+                <li>{{#link-to 'contact'}}Contact{{/link-to}}</a></li>
+              </ul>
+          </div><!-- /.navbar-collapse -->
+        </div>
+      </nav>
+
+      // This will tell ember where to render views when the url get changed
+      {{outlet}}
+</script>
+
+
+    <script type="text/x-handlebars"  id="index">
+
+    <div class="jumbotron masthead">
+      <div class="container">
+        <h1>Elemento</h1>
+        <p class="lead">Sleek, intuitive, and powerful Skin for Bootstrap 3.</p>
+        <p>
+          <a href="http://codecanyon.net/item/elemento-bootstrap-skin/3720172?ref=geedmo" class="btn btn-primary btn-action" >Get Elemento</a>
+        </p>
+      </div>
+      <div class="container">
+        <ul class="list-inline">
+          <li>
+            <a href="http://www.twitter.com/geedmo" >Twitter</a>
+          </li>
+          <li>
+            <a href="http://codecanyon.net/user/geedmo" >Envato</a>
+          </li>
+          <li>
+            <a href="http://getbootstrap.com/" >Bootstrap</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="container">
+      <h1 class="text-center">Start Browsing Elemento.</h1>
+      <p class="text-center">Take a look at this <strong>5</strong> themes.</p>
+      <div class="row">
+        <div class="col-md-4 col-md-offset-4 col-sm-6 col-sm-offset-3">
+          <div class="panel panel-default">
+            <div class="list-group text-center" id="css-switcher">
+              <a id="go-fire"  class="list-group-item" href="#" rel="assets/css/bootstrap.fire.min.css">Fire</a>
+              <a id="go-water" class="list-group-item" href="#" rel="assets/css/bootstrap.water.min.css">Water</a>
+              <a id="go-earth" class="list-group-item" href="#" rel="assets/css/bootstrap.earth.min.css">Earth</a>
+              <a id="go-wind"  class="list-group-item" href="#" rel="assets/css/bootstrap.wind.min.css">Wind</a>
+              <a id="go-love"  class="list-group-item" href="#" rel="assets/css/bootstrap.love.min.css">Love</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <br>
+      <p class="text-center">
+        Looking for <a href="http://geedmo.com/codecanyon/elemento/bootstrap2/">Elemento 2</a> ?
+      </p>
+    </div>
+
+       <!-- Footer ================================================== -->
+    <footer class="text-center">
+          <p><a href="#"><em class="fa fa-chevron-up"></em></a></p>
+          <p>2013 &copy; All rights reserved.</p>
+          <br>
+        </footer>
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script type="text/x-handlebars"  id="about">
+     <div class="container">
+
+        <ul class="breadcrumb">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li class="active">
+            About
+          </li>
+        </ul>
+
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>About Us</h2>
+            <hr>
+            <div class="row">
+              <div class="col-lg-9">
+                <p>
+                  Lorem ipsum sit dolor ares ameit. This could be a blockquote. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
+                </p>
+                <p>Vestibulum a tincidunt magna. Nulla commodo interdum magna consectetur lacinia. Pellentesque eget quam dui, sit amet eleifend mauris. Curabitur sodales nisl eu enim suscipit eu faucibus dui mattis. Ut eu aliquam orci. Nam in purus in lacus dictum pharetra sit amet ac arcu. Cras sodales nunc at purus ultrices eu porttitor lorem eleifend. In vitae porttitor eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris vel ultricies augue. Etiam ultrices egestas pulvinar. Aenean condimentum augue sapien. Etiam feugiat risus massa. Nulla justo neque, fermentum nec mollis id, porta vitae lectus. Duis eleifend elementum commodo. </p>
+              </div>
+              <div class="col-lg-3">
+                <div class="panel panel-primary">
+                  <div class="panel-heading">We are hiring</div>
+                  <div class="panel-body">
+                    <div class="text-center">
+                      <p>Vestibulum mauris nisl, dictum vitae dapibus iaculis, tempor sed libero. </p>
+                      <br>
+                      <a href="#" class="btn btn-primary">Apply Now</a>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <h2>The Team</h2>
+        <hr>
+        <div class="row">
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <div class="about portrait">
+              <img alt="" src="assets/img/image-placeholder.png" />
+              <div class="social">
+                  <a href="#"><em class="fa fa-facebook"></em></a>
+                  <a href="#"><em class="fa fa-twitter"></em></a>
+                  <a href="#"><em class="fa fa-flickr"></em></a>
+                  <a href="#"><em class="fa fa-google-plus"></em></a>
+                  <a href="#"><em class="fa fa-rss"></em></a>
+              </div>
+              <div class="caption">
+                <h4 class="name">Dohn Joe</h4>
+                <p>
+                  Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <div class="about portrait">
+              <img alt="" src="assets/img/image-placeholder.png" />
+              <div class="social">
+                  <a href="#"><em class="fa fa-facebook"></em></a>
+                  <a href="#"><em class="fa fa-twitter"></em></a>
+                  <a href="#"><em class="fa fa-flickr"></em></a>
+                  <a href="#"><em class="fa fa-google-plus"></em></a>
+                  <a href="#"><em class="fa fa-rss"></em></a>
+              </div>
+              <div class="caption">
+                <h4 class="name">Dohn Joe</h4>
+                <p>
+                  Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <div class="about portrait">
+              <img alt="" src="assets/img/image-placeholder.png" />
+              <div class="social">
+                  <a href="#"><em class="fa fa-facebook"></em></a>
+                  <a href="#"><em class="fa fa-twitter"></em></a>
+                  <a href="#"><em class="fa fa-flickr"></em></a>
+                  <a href="#"><em class="fa fa-google-plus"></em></a>
+                  <a href="#"><em class="fa fa-rss"></em></a>
+              </div>
+              <div class="caption">
+                <h4 class="name">Dohn Joe</h4>
+                <p>
+                  Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-3 col-sm-3 col-xs-6">
+            <div class="about portrait">
+              <img alt="" src="assets/img/image-placeholder.png" />
+              <div class="social">
+                  <a href="#"><em class="fa fa-facebook"></em></a>
+                  <a href="#"><em class="fa fa-twitter"></em></a>
+                  <a href="#"><em class="fa fa-flickr"></em></a>
+                  <a href="#"><em class="fa fa-google-plus"></em></a>
+                  <a href="#"><em class="fa fa-rss"></em></a>
+              </div>
+              <div class="caption">
+                <h4 class="name">Dohn Joe</h4>
+                <p>
+                  Sed posuere consectetur est at lobortis. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+           <!-- Footer
+    ================================================== -->
+    <footer class="text-center">
+          <p><a href="#"><em class="fa fa-chevron-up"></em></a></p>
+          <p>2013 &copy; All rights reserved.</p>
+          <br>
+        </footer>
+
+       </script>
+
+
+
+
+       <script type="text/x-handlebars"  id="contact">
+          <div class="container">
+
+        <ul class="breadcrumb">
+          <li>
+            <a href="#">Home</a>
+          </li>
+          <li class="active">
+            Contact
+          </li>
+        </ul>
+
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-xs-12">
+            <h2>Contact Us</h2>
+            <hr>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4">
+            <h4>Information</h4>
+            <p>
+              Phasellus ultricies id suscipit mauris monte lobortis. Cum sociis natoque penatibus magnis parturient.
+            </p>
+            <br />
+            <h4>General Inquiries</h4>
+            <address>
+              <p>
+                795 Folsom Ave, Suite 600
+                <br />
+                San Francisco, CA 94107
+              </p>
+            </address>
+            <address>
+              <p>
+                <i class="fa fa-headphones"></i> (123) 456-7890
+              </p>
+              <p>
+                <i class="fa fa-envelope"></i> mail@example.com
+              </p>
+              <p>
+                <i class="fa fa-globe"></i> www.example.com
+              </p>
+            </address>
+          </div>
+          <div class="col-md-8">
+            <h4>Our Location</h4>
+            <div style="padding: 5px; border: 1px solid #CCC">
+              <div  class="gmap"
+              data-zoom="14"
+              data-markers="Little Lonsdale St, Melbourne, Victoria 8011 Australia; 2 Elizabeth St, Melbourne, Victoria 3000 Australia"
+              style="height: 300px;"></div>
+            
+            </div>
+            <br />
+
+            <h4>Leave a Message</h4>
+            <form actio="" method="post">
+              <label for="name">Name</label>
+              <input id="name" name="name" class="form-control" type="text">
+              <label for="email">Email</label>
+              <input id="email" name="email" class="form-control" type="email">
+              <label for="comment">Message</label>
+              <textarea id="comment" name="comment" class="form-control" cols="15" rows="3"></textarea>
+              <br>
+              <button class="btn btn-primary" type="submit">Send</button>
+            </form>
+          </div>
+        </div>
+
+   <!-- Footer
+    ================================================== -->
+    <footer class="text-center">
+          <p><a href="#"><em class="fa fa-chevron-up"></em></a></p>
+          <p>2013 &copy; All rights reserved.</p>
+          <br>
+        </footer>
+
+        </script>
+ 
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/application.js"></script>
+
+    <script src='app/src/handlebars.js'></script>
+    <script src="app/src/ember-1.0.0-rc.8.js"></script>
+    <script src="app/app.js"></script>
+  </div> <!-- /ocwrapper -->
+
+</body>
+
+
+</html>
